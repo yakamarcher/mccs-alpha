@@ -2,7 +2,7 @@
 <div class="ui middle aligned center aligned grid">
     <div class="column login-box">
         <h1 class="ui primary image header">
-            Login to your account
+            Se connecter à son compte
         </h1>
         <form action="/login?redirect_login={{.RedirectURL}}" method="post" class="ui large form">
             <div class="ui raised segment">
@@ -19,13 +19,13 @@
                     </div>
                 </div>
                 <div class="g-recaptcha" data-sitekey={{.RecaptchaSitekey}} style="margin: 2em 0;"></div>
-                <button class="ui fluid large primary submit button">Login</button>
+                <button class="ui fluid large primary submit button">Se connecter</button>
             </div>
             <div class="ui error message"></div>
         </form>
         <div class="ui message">
-            <p><a href="/lost-password">Click here</a> if you forgot your password</p>
-            <p>Need an account? <a href="/signup">Sign Up</a></p>
+            <p><a href="/lost-password">Cliquez ici</a> si vous avez oublié votre mot de passe</p>
+            <p>Nouveau compte ? <a href="/signup">Créer un compte</a></p>
         </div>
     </div>
 </div>
