@@ -2,11 +2,11 @@
 <h1 class="ui primary header">Create your FREE directory listing</h1>
 <form action="/signup" method="post" class="ui form">
     <div class="ui segment secondary">
-        <h2 class="ui medium header">General Information</h2>
-        <p><i>Please provide your business' trading name.</i></p>
+        <h2 class="ui medium header">Information Générale</h2>
+        <p><i>Renseignez votre raison sociale.</i></p>
         <div class="fields">
             <div class="five wide field required">
-                <label>Business Name:</label>
+                <label>Nom de votre métier :</label>
                 {{if .Business.BusinessName}}
                 <input maxlength="100" type="text" name="business_name" value="{{.Business.BusinessName}}">
                 {{else}}
@@ -16,32 +16,32 @@
         </div>
     </div>
     <div class="ui segment secondary">
-        <h2 class="ui medium header">What Your Business Provides &amp; Needs</h2>
+        <h2 class="ui medium header">Vos propositions &amp; Besoins</h2>
         <p><i>Enter up to 10 descriptive tags in each input box (e.g., "Restaurant", “Food", “Noodles", etc.)
                 Start typing to see available tags. Whenever possible select existing tags to get more matches.
                 <!-- <br>
                 <a href="https://opencredit.network/tagging-offers-wants" target="#blank">Learn more about creating great tags for your business</a> -->
         </i></p>
         <div class="field required">
-            <label>Products/Services Offered:</label>
+            <label>Produits/Services Proposés:</label>
             <div class="ui fluid multiple search selection offers dropdown">
                 {{if .Business.Offers}}
                 <input maxlength="500" name="offers" type="hidden" value="{{TagsToString .Business.Offers}}">
                 {{else}}
                 <input maxlength="500" name="offers" type="hidden">
                 {{end}}
-                <div class="default text">Enter tags for what you can provide</div>
+                <div class="default text">Entrez les éléments pour ce que vous produisez</div>
             </div>
         </div>
         <div class="field required">
-            <label>Products/Services Wanted:</label>
+            <label>Produits/Services Recherchés:</label>
             <div class="ui fluid multiple search selection wants dropdown">
                 {{if .Business.Wants}}
                 <input maxlength="500" name="wants" type="hidden" value="{{TagsToString .Business.Wants}}">
                 {{else}}
                 <input maxlength="500" name="wants" type="hidden">
                 {{end}}
-                <div class="default text">Enter tags of what you want</div>
+                <div class="default text">Entrez les éléments pour ce que vous recherchez</div>
             </div>
         </div>
     </div>
